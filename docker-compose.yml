@@ -10,7 +10,7 @@ services:
     ports:
       - "1-65535:1-65535"
     volumes:
-#      - ./steam:/home/steam:rw
+      - ./steam:/home/steam:rw
 #      - ./server.cfg:/home/steam/bm/bms/cfg/server.cfg:rw
     environment:
       USER: steam

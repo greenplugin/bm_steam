@@ -6,11 +6,11 @@ services:
     build: docker
     network_mode: host
 #    command: sh -c "./steamcmd.sh +login anonymous +force_install_dir ${HOMEDIR}/bm +app_update 346680 +validate"
-    command: sh -c "/home/steam/bm/srcds_run -game bms +hostname 'Tesseract Game' +map gasworks +maxplayers 24"
+    command: sh -c "/home/steam/bm/srcds_run -game bms +hostname 'Tesseract Game' +map gasworks +maxplayers 3"
     ports:
       - "1-65535:1-65535"
 #    volumes:
-#      - ./server.cfg:/app/bms/cfg/server.cfg:rw
+      - ./server.cfg:/home/steam/bm/bms/cfg/server.cfg:rw
 #      - ./steam:/home/steam:rw
     environment:
       USER: steam

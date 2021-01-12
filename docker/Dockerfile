@@ -2,6 +2,8 @@ FROM cm2network/steamcmd:latest
 
 WORKDIR ${STEAMCMDDIR}
 
-RUN ./steamcmd.sh +login anonymous +force_install_dir ${HOMEDIR}/bm +app_update 346680 +validate +quit
+COPY ./entrypoint.sh ${STEAMCMDDIR}/entrypoint.sh
 
-WORKDIR ${HOMEDIR}/bm
+RUN chmod +x ${STEAMCMDDIR}/entrypoint.sh
+
+ENTRYPOINT entrypoint.sh

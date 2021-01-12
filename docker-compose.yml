@@ -13,5 +13,3 @@ services:
       - ./home/steam/bm:/app:rw
     environment:
       USER: steam
-      HOMEDIR: "/home/${USER}"
-      STEAMCMDDIR: "${HOMEDIR}/steamcmd"

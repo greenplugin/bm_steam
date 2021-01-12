@@ -5,11 +5,11 @@ services:
 #    image: lacledeslan/gamesvr-blackmesa-freeplay
     build: docker
     network_mode: host
-    command: sh -c "./srcds_run -game bms +hostname 'Tesseract Game' +map gasworks +maxplayers 24"
+    command: sh -c "/home/steam/bm/srcds_run -game bms +hostname 'Tesseract Game' +map gasworks +maxplayers 24"
     ports:
       - "1-65535:1-65535"
     volumes:
 #      - ./server.cfg:/app/bms/cfg/server.cfg:rw
-      - ./home/steam/bm:/app:rw
+      - /home/steam/bm:/app:rw
     environment:
       USER: steam

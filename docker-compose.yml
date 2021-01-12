@@ -9,7 +9,7 @@ services:
     command: sh -c "/home/steam/bm/srcds_run -game bms +hostname 'Tesseract Game' +map gasworks +maxplayers 24"
     ports:
       - "1-65535:1-65535"
-    volumes:
+#    volumes:
 #      - ./server.cfg:/app/bms/cfg/server.cfg:rw
 #      - ./steam:/home/steam:rw
     environment:

@@ -1,3 +1,4 @@
+#!/bin/bash
 cd "$STEAMCMDDIR" || exit
 ./steamcmd.sh +login anonymous +force_install_dir "$HOMEDIR"/bm +app_update 346680 +validate +quit
 
